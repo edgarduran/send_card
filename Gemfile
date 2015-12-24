@@ -40,3 +40,10 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'launchy'
+  gem 'pry'
+end

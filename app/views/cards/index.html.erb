@@ -1,0 +1,7 @@
+<h1>Cards</h1>
+
+<% @cards.each do |card| %>
+  <%= card.name %><br>
+  <%= image_tag card.image, :size => "200x200" %><br>
+  <%= link_to "View Card", card_path(card.id) %>
+<% end %>
