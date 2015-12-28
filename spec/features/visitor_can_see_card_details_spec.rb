@@ -15,7 +15,6 @@ describe 'cards/show', type: :feature do
   it 'shows a card when view link is clicked' do
     first(:link, "View Card").click
 
-    save_and_open_page
     expect(current_path).to eq(card_path(card1))
     expect(page).to have_content("Bday Card")
     expect(page).to have_content("Hey, it's your bday and junk!")
