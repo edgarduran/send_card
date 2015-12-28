@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   root to: 'cards#index'
 
   resources :cards, only: [:index, :show]
-  resources :categories, only: [:index]
+  resources :categories, only: [:index, :show]
 end
