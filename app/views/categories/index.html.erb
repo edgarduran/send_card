@@ -1,7 +1,12 @@
-<h1>Categories</h1>
+<h1 class="center">Categories</h1>
 
-<% @categories.each do |category| %>
-  <ul>
-    <li><h3> <%= link_to category.name.titleize, category_path(category) %></h3></li>
-  </ul>
-<% end %>
+<div class="row list_info-tiles">
+  <% @categories.each do |category| %>
+    <ul>
+      <div class="col hide-on-small-only m6 l4">
+        <li><h3> <%= link_to category.name.titleize, category_path(category) %></h3></li>
+      </div>
+    </ul>
+  <% end %>
+
+</div>

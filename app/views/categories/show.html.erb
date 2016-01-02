@@ -1,7 +1,22 @@
 <h2> <%= @category.name.titleize %></h2>
 
-<% @cards.each do |card| %>
-  <%= card.name %><br>
-  <%= image_tag card.image, :size => "200x200" %><br>
-  <%= link_to "View Card", card_path(card.id) %>
-<% end %>
+
+<div class="row">
+  <% @cards.each do |card| %>
+  <div class="col s12 m5">
+    <div class="card medium">
+      <span class="card-title black-text"><%= card.name %></span>
+      <div class="card-image">
+        <%= image_tag card.image, :size => "100x300" %><br>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div class="card-action">
+        <%= link_to "View Card", card_path(card.id) %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
